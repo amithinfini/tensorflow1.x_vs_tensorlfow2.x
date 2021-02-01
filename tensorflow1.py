@@ -1,5 +1,6 @@
 import tensorflow as tf
 
+# Creating the Graph
 basic_addition_graph = tf.Graph()
 with basic_addition_graph.as_default():
     a = tf.constant([2,5,7])
@@ -9,7 +10,10 @@ with basic_addition_graph.as_default():
     x = tf.add(a,b)
     y = tf.multiply(x,c)
 
+    # print(y)
+
+
 #Create A session to RUN the Graph
 with tf.Session(graph = basic_addition_graph) as sess:
     print(sess.run(y))
-
+    print(sess.run(x))
